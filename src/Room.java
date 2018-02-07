@@ -43,4 +43,12 @@ public class Room {
         // Divide the total area by the amount of wall covered per litre of paint.
         return totalWallArea / 10.0;
     }
+
+    /**
+     * Calculates the volume of the room in m^3.
+     * @return Volume of the room in m^3.
+     */
+    public double calculateVolume() {
+        return width * height * length;
+    }
 }
