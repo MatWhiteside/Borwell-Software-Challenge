@@ -25,4 +25,22 @@ public class Room {
     public double calculateArea() {
         return width * length;
     }
+
+    /**
+     * Calculates the liters of paint required to paint all walls.
+     * Assumptions:
+     *  - Amount of paint required is for 1 coat.
+     *  - It's presumed there are no doors or windows in the room (we don't have this data).
+     *  - 1 litre of paint covers 10m^2 of wall
+     * @return Liters of paint required to paint all walls.
+     */
+    public double calculatePaintRequired() {
+        // Calculate the total area of all the walls.
+        double lengthWallsArea = length * height;
+        double widthWallsArea = width * height;
+        double totalWallArea = (lengthWallsArea + widthWallsArea) * 2;
+
+        // Divide the total area by the amount of wall covered per litre of paint.
+        return totalWallArea / 10.0;
+    }
 }
