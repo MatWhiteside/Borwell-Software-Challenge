@@ -13,9 +13,9 @@ public class Room {
      * @param height Height of the room given in meters.
      */
     public Room(double width, double length, double height) {
-        this.width = width;
-        this.length = length;
-        this.height = height;
+        this.width = Math.abs(width);
+        this.length = Math.abs(length);
+        this.height = Math.abs(height);
     }
 
     /**
